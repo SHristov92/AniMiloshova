@@ -8,7 +8,7 @@ Web/
 ├── index.html          page layout (rarely needs changes)
 ├── css/style.css       styles – colours are at the top in :root
 ├── js/main.js          loads the JSON and builds the gallery + lightbox
-├── data/site.json      name, tagline, about text, facts, story timeline, press, contact
+├── data/site.json      name, tagline, about text, exhibition, commissions, story, press, contact, footer
 ├── data/gallery.json   categories and artworks
 ├── data/media.json     studio videos and "Behind the easel" photos
 ├── images/
@@ -66,10 +66,22 @@ Everything is in `data/site.json`:
 - `facts`: the small coloured number cards under the about text
 - `timeline`: the "My story" cards (`year`, `title`, `text`, optional `url`)
 - `press`: the "Featured in" cards (`source`, `title`, optional `year` and `url`)
-- `contact`: email, Instagram handle, phone, location
+- `event`: the big "Latest exhibition" card under the gallery (`label`, `title`, `date`, `place`, `text`,
+  `image`, `imageAlt`, optional `url` and `button` text). Delete the whole `event` block to hide it,
+  or change `label` to e.g. `Upcoming exhibition` for a future one.
+- `commissions`: the "Paintings made for you" cards (`title`, `text`, `image`, optional `price` such as `from 150 €`)
+  plus an `intro` and a `note`. Each card has an "Ask about it" link that opens an email.
+- `kindWords`: quotes from buyers or visitors, shown as cards. Each item: `text`, `name`, optional `from`
+  (e.g. `Sofia` or `bought "Peonies"`). The list is empty, so the section is hidden until real quotes are added:
+
+  ```json
+  { "text": "The painting of our house is the best gift we ever got!", "name": "Maria", "from": "Plovdiv" }
+  ```
+- `contact`: email, Instagram handle, phone, location (also shown in the footer)
+- `footer.about`: the short text in the footer
 - `social`: extra links shown as buttons
 
-An empty list (`[]`) hides its section.
+An empty list (`[]`) hides its section, and menu links to hidden sections are hidden too.
 Leaving `phone` empty hides that card.
 
 ## Videos and photos

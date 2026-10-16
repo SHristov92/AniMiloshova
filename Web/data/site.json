@@ -24,6 +24,38 @@
     { "value": "♥", "label": "paintings & handmade jewellery" }
   ],
 
+  "event": {
+    "label": "Latest exhibition",
+    "title": "International exhibition in Athens",
+    "date": "28 June 2026",
+    "place": "Michael Cacoyannis Foundation, Athens",
+    "text": "An evening of art with artists from several countries around the world, organised by ArtNumber23.",
+    "image": "images/photos/ani-easel-3.jpg",
+    "imageAlt": "Ani holding the framed Pegasus painting among wildflowers",
+    "url": "https://www.instagram.com/p/DYCFC3fR0oF/",
+    "button": "See the post"
+  },
+
+  "commissions": {
+    "title": "Paintings made for you",
+    "intro": "Would you like a painting just for you, or as a gift for someone you love? These are the things I love to paint the most.",
+    "items": [
+      { "title": "Your home, painted", "text": "Your house, your grandparents' village home or a favourite old street, painted in the same cozy style as my cottages and old towns.", "image": "images/gallery/thumbs/cottage-with-wildflowers.jpg", "price": "" },
+      { "title": "Animals & pets", "text": "A portrait of your cat, dog or horse, sitting in a meadow full of flowers or with a little bit of magic around it.", "image": "images/gallery/thumbs/ginger-cat.jpg", "price": "" },
+      { "title": "Flowers & still life", "text": "Peonies, roses, herbs or a still life with your favourite things: a warm, bright gift for any home.", "image": "images/gallery/thumbs/peonies.jpg", "price": "" }
+    ],
+    "note": "Every commission is painted by hand in oil, acrylic or watercolour. Write to me with your idea, the size you would like and a photo, and I will tell you the price and how long it will take."
+  },
+
+  "kindWords": {
+    "title": "Kind words",
+    "items": []
+  },
+
+  "footer": {
+    "about": "Cozy, nostalgic paintings made by hand in Bulgaria: cottages with flowers, misty forests, old streets and a little bit of magic."
+  },
+
   "timeline": {
     "title": "My story",
     "items": [

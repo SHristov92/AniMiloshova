@@ -1,6 +1,6 @@
 /* ==========================================================
    Ani Miloshova – site script
-   Loads data/site.json and data/gallery.json and builds the page.
+   Loads data/site.json, data/media.json and data/gallery.json and builds the page.
    No build step, no libraries – just plain JavaScript.
    ========================================================== */
 
@@ -109,6 +109,10 @@
       $("#press").hidden = false;
     }
 
+    renderEvent(site.event);
+    renderCommissions(site.commissions, (site.contact || {}).email);
+    renderKindWords(site.kindWords);
+
     var contact = site.contact || {};
     state.contactEmail = contact.email || "";
     if (contact.text) $("#contact-text").textContent = contact.text;
@@ -133,6 +137,82 @@
     var social = $("#social");
     (site.social || []).forEach(function (s) {
       if (s.url) social.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label || s.url }));
+    });
+
+    // Footer: a short line about the artist and the same contacts in a list.
+    $("#footer-about").textContent = (site.footer && site.footer.about) || site.intro || "";
+    var footerContacts = $("#footer-contacts");
+    items.forEach(function (item) {
+      footerContacts.appendChild(el("li", {}, [
+        el("span", { class: "label", text: item.label }),
+        item.href ? el("a", { href: item.href, text: item.value }) : el("span", { text: item.value })
+      ]));
+    });
+  }
+
+  // A highlighted exhibition or event (site.json "event"). Leave it out to hide the section.
+  function renderEvent(event) {
+    if (!event || !event.title) return;
+    $("#event-title").textContent = event.title;
+    if (event.label) $("#event-label").textContent = event.label;
+    $("#event-when").textContent = [event.date, event.place].filter(Boolean).join(" · ");
+    $("#event-text").textContent = event.text || "";
+    if (event.image) { $("#event-img").src = event.image; $("#event-img").alt = event.imageAlt || event.title; }
+    else $(".event-img").hidden = true;
+    if (event.url) {
+      var link = $("#event-link");
+      link.href = event.url;
+      link.textContent = event.button || "See more";
+      link.hidden = false;
+    }
+    $("#event").hidden = false;
+  }
+
+  // What she paints to order (site.json "commissions"). "price" is optional, e.g. "from 120 €".
+  function renderCommissions(data, email) {
+    if (!data || !(data.items || []).length) return;
+    if (data.title) $("#commissions-title").textContent = data.title;
+    $("#commissions-intro").textContent = data.intro || "";
+    var box = $("#services");
+    data.items.forEach(function (item, i) {
+      var subject = "Commission: " + (item.title || "a painting");
+      box.appendChild(el("article", { class: "service", style: "--accent:" + PALETTE[i % PALETTE.length] }, [
+        item.image ? el("div", { class: "service-img" }, [el("img", { src: item.image, alt: item.title || "", loading: "lazy" })]) : null,
+        el("div", { class: "service-body" }, [
+          el("h3", { text: item.title || "" }),
+          item.text ? el("p", { text: item.text }) : null,
+          item.price ? el("p", { class: "service-price", text: item.price }) : null,
+          email ? el("a", { class: "service-ask", href: "mailto:" + email + "?subject=" + encodeURIComponent(subject), text: "Ask about it →" }) : null
+        ])
+      ]));
+    });
+    if (data.note) { $("#commissions-note").textContent = data.note; $("#commissions-note").hidden = false; }
+    $("#commissions").hidden = false;
+  }
+
+  // Testimonials (site.json "kindWords"). Hidden until there is at least one real quote.
+  function renderKindWords(data) {
+    if (!data || !(data.items || []).length) return;
+    if (data.title) $("#kind-words-title").textContent = data.title;
+    var box = $("#quotes");
+    data.items.forEach(function (q, i) {
+      if (!q.text) return;
+      box.appendChild(el("figure", { class: "quote", style: "--accent:" + PALETTE[i % PALETTE.length] }, [
+        el("blockquote", { text: q.text }),
+        q.name ? el("figcaption", {}, [
+          el("strong", { text: q.name }),
+          q.from ? el("span", { text: q.from }) : null
+        ]) : null
+      ]));
+    });
+    $("#kind-words").hidden = !box.children.length;
+  }
+
+  // Hide menu links whose section has nothing to show.
+  function syncNav() {
+    document.querySelectorAll('.site-nav a[href^="#"], .footer-nav a[href^="#"]').forEach(function (a) {
+      var target = document.getElementById(a.getAttribute("href").slice(1));
+      a.hidden = !!(target && target.hidden);
     });
   }
 
@@ -304,6 +384,24 @@
     });
   }
 
+  // Footer: small squares of the first paintings, each opening the lightbox.
+  function renderFooterThumbs() {
+    var box = $("#footer-thumbs");
+    box.innerHTML = "";
+    state.artworks.slice(0, 6).forEach(function (art) {
+      var thumb = el("button", { type: "button", class: "footer-thumb", "aria-label": art.title || "Painting" }, [
+        el("img", { src: art.thumb || art.image, alt: "", loading: "lazy" })
+      ]);
+      thumb.addEventListener("click", function () {
+        state.filter = "all";
+        renderFilters();
+        renderGrid();
+        openLightbox(state.visible.indexOf(art));
+      });
+      box.appendChild(thumb);
+    });
+  }
+
   /* ---------- Studio videos & photos (media.json) ---------- */
 
   function renderMedia(media) {
@@ -339,6 +437,10 @@
         ]));
       });
       $("#moments").hidden = false;
+      // Start in the middle of the strip, so there are photos to discover on both sides.
+      requestAnimationFrame(function () {
+        strip.scrollLeft = (strip.scrollWidth - strip.clientWidth) / 2;
+      });
     }
   }
 
@@ -354,8 +456,15 @@
     var cat = categoryOf(art);
 
     lightbox.style.setProperty("--accent", cat.color);
-    $("#lb-img").src = art.image;
-    $("#lb-img").alt = art.title || "";
+    var img = $("#lb-img");
+    if (img.getAttribute("src") !== art.image) {
+      // Fade the new painting in once it has loaded.
+      img.classList.add("is-loading");
+      img.onload = img.onerror = function () { img.classList.remove("is-loading"); };
+      img.src = art.image;
+    }
+    img.alt = art.title || "";
+    $("#lb-counter").textContent = (state.current + 1) + " / " + count;
     $("#lb-category").textContent = cat.label;
     $("#lb-title").textContent = art.title || "";
     $("#lb-mood").textContent = art.mood || "";
@@ -382,6 +491,12 @@
     var multiple = count > 1;
     $("#lb-prev").hidden = !multiple;
     $("#lb-next").hidden = !multiple;
+    $("#lb-counter").hidden = !multiple;
+
+    // Load the neighbours in the background, so the arrows feel instant.
+    if (multiple) [1, -1].forEach(function (step) {
+      new Image().src = state.visible[(state.current + step + count) % count].image;
+    });
 
     // Shareable link to this painting, e.g. https://site/#art/sea-storm
     if (art.id) history.replaceState(null, "", "#art/" + art.id);
@@ -401,14 +516,25 @@
     if (location.hash.indexOf("#art/") === 0) history.replaceState(null, "", location.pathname + location.search + "#gallery");
   });
   $("#lb-close").addEventListener("click", closeLightbox);
+
+  // "i" button / key: hide the label so only the painting is on the wall.
+  function toggleInfo() {
+    var hide = !lightbox.classList.contains("no-info");
+    lightbox.classList.toggle("no-info", hide);
+    $("#lb-info-toggle").setAttribute("aria-pressed", String(!hide));
+  }
+  $("#lb-info-toggle").addEventListener("click", toggleInfo);
   $("#lb-prev").addEventListener("click", function () { showArtwork(state.current - 1); });
   $("#lb-next").addEventListener("click", function () { showArtwork(state.current + 1); });
-  // Click on the dark backdrop closes it.
-  lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeLightbox(); });
+  // A click on the empty wall around the painting closes it.
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lightbox || e.target.classList.contains("lb-stage") || e.target.classList.contains("lb-figure")) closeLightbox();
+  });
   document.addEventListener("keydown", function (e) {
     if (!lightbox.open) return;
     if (e.key === "ArrowLeft") showArtwork(state.current - 1);
     if (e.key === "ArrowRight") showArtwork(state.current + 1);
+    if ((e.key === "i" || e.key === "I") && !e.ctrlKey && !e.metaKey && !e.altKey) toggleInfo();
   });
 
   // Swipe left / right on phones.
@@ -461,9 +587,11 @@
     })
     .catch(function (err) { console.error("Could not load site.json", err); return {}; });
 
-  loadJSON("data/media.json")
+  var mediaLoaded = loadJSON("data/media.json")
     .then(renderMedia)
     .catch(function (err) { console.error("Could not load media.json", err); });
+
+  Promise.all([siteLoaded, mediaLoaded]).then(syncNav);
 
   loadJSON("data/gallery.json")
     .then(function (data) {
@@ -471,8 +599,12 @@
       setupCategories(data);
       renderFilters();
       renderGrid();
-      siteLoaded.then(function (site) { renderHero(site.heroPhoto); });
-      openFromHash();
+      renderFooterThumbs();
+      // Wait for site.json too, so the "Ask about this painting" email is known.
+      siteLoaded.then(function (site) {
+        renderHero(site.heroPhoto);
+        openFromHash();
+      });
     })
     .catch(function (err) {
       console.error("Could not load gallery.json", err);
