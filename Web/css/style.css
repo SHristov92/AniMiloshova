@@ -71,7 +71,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .btn {
   display: inline-block;
   padding: 13px 26px;
-  border-radius: 999px;
+  border-radius: 0;
   font-weight: 600;
   font-size: .95rem;
   text-decoration: none;
@@ -171,7 +171,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
 .chip {
   font: inherit; font-size: .9rem; font-weight: 600;
-  padding: 9px 20px; border-radius: 999px;
+  padding: 9px 20px; border-radius: 0;
   border: 2px solid var(--line); background: var(--white); color: var(--ink);
   cursor: pointer; transition: all .2s;
 }
@@ -287,7 +287,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 
 .social { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
 .social a {
-  padding: 10px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: .9rem;
+  padding: 10px 22px; border-radius: 0; text-decoration: none; font-weight: 600; font-size: .9rem;
   background: var(--ink); color: var(--white); transition: background .2s, transform .2s;
 }
 .social a:hover { background: var(--violet); transform: translateY(-2px); }
@@ -501,7 +501,7 @@ html:has(.lightbox[open]) { overflow: hidden; }
 
 .lb-btn, .lb-nav {
   display: grid; place-items: center;
-  width: 44px; height: 44px; border-radius: 50%;
+  width: 44px; height: 44px; border-radius: 0;
   border: 1px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .06);
   color: #f3efe8; cursor: pointer; line-height: 1;
   transition: background .2s, border-color .2s, opacity .3s;
