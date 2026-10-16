@@ -40,11 +40,49 @@
     "title": "Paintings made for you",
     "intro": "Would you like a painting just for you, or as a gift for someone you love? These are the things I love to paint the most.",
     "items": [
-      { "title": "Your home, painted", "text": "Your house, your grandparents' village home or a favourite old street, painted in the same cozy style as my cottages and old towns.", "image": "images/gallery/thumbs/cottage-with-wildflowers.jpg", "price": "" },
-      { "title": "Animals & pets", "text": "A portrait of your cat, dog or horse, sitting in a meadow full of flowers or with a little bit of magic around it.", "image": "images/gallery/thumbs/ginger-cat.jpg", "price": "" },
-      { "title": "Flowers & still life", "text": "Peonies, roses, herbs or a still life with your favourite things: a warm, bright gift for any home.", "image": "images/gallery/thumbs/peonies.jpg", "price": "" }
+      { "title": "Your home, painted", "text": "Your house, your grandparents' village home or a favourite old street, painted in the same cozy style as my cottages and old towns.", "image": "images/gallery/thumbs/cottage-with-wildflowers.jpg", "price": "from 150 €" },
+      { "title": "Animals & pets", "text": "A portrait of your cat, dog or horse, sitting in a meadow full of flowers or with a little bit of magic around it.", "image": "images/gallery/thumbs/ginger-cat.jpg", "price": "from 120 €" },
+      { "title": "Flowers & still life", "text": "Peonies, roses, herbs or a still life with your favourite things: a warm, bright gift for any home.", "image": "images/gallery/thumbs/peonies.jpg", "price": "from 100 €" }
     ],
     "note": "Every commission is painted by hand in oil, acrylic or watercolour. Write to me with your idea, the size you would like and a photo, and I will tell you the price and how long it will take."
+  },
+
+  "prints": {
+    "title": "Prints & cards",
+    "intro": "Can't take the original home? My favourite paintings are also printed on thick, matte art paper.",
+    "items": [
+      { "title": "Art prints", "text": "High-quality prints of my paintings in A4 and A3, signed by hand. Ready for a frame.", "image": "images/gallery/thumbs/cabin-in-the-mist.jpg", "price": "from 25 €" },
+      { "title": "Postcards", "text": "A set of postcards with cottages, flowers and misty forests, to send or to keep.", "image": "images/gallery/thumbs/old-house-in-autumn.jpg", "price": "3 € each" },
+      { "title": "Greeting cards", "text": "Folded cards with an envelope, blank inside, for birthdays, holidays or just because.", "image": "images/gallery/thumbs/rose-and-butterfly.jpg", "price": "5 € each" }
+    ],
+    "note": "Write to me which painting and size you would like. Prints are sent by post within Bulgaria and abroad."
+  },
+
+  "faq": {
+    "title": "Questions & answers",
+    "intro": "",
+    "items": [
+      { "q": "How do I buy a painting?", "a": "Write to me through the form below or by email, with the name of the painting. I will confirm it is still available, send you the price with shipping, and reserve it for you." },
+      { "q": "Do you ship abroad?", "a": "Yes. I ship within Bulgaria with a courier and abroad by post, carefully wrapped. The cost depends on the size and the country." },
+      { "q": "Are the paintings framed?", "a": "Some come in a frame and some without one; it is written in the details of each painting. I can also suggest a frame that suits it." },
+      { "q": "How long does a commission take?", "a": "Usually two to four weeks, depending on the size and the technique. I will tell you an exact date before I start." },
+      { "q": "How can I pay?", "a": "By bank transfer, or in cash when we meet in person. For commissions I ask for half in advance and the rest when the painting is ready." },
+      { "q": "How do I take care of a painting?", "a": "Keep it away from direct sunlight and damp walls, and dust it gently with a soft, dry cloth. Watercolours are best kept behind glass." }
+    ]
+  },
+
+  "instagram": {
+    "title": "Follow along on Instagram",
+    "text": "New paintings, works in progress and little moments from the studio.",
+    "button": "Follow",
+    "images": []
+  },
+
+  "newsletter": {
+    "title": "Hear about new paintings first",
+    "text": "Leave your email and I will write to you when there are new paintings, prints or exhibitions. No spam, just art.",
+    "button": "Sign me up",
+    "endpoint": ""
   },
 
   "kindWords": {
@@ -80,7 +118,8 @@
     "email": "hello@example.com",
     "phone": "",
     "location": "Bulgaria",
-    "instagram": "cozy.art.by.ani"
+    "instagram": "cozy.art.by.ani",
+    "formEndpoint": ""
   },
 
   "social": []

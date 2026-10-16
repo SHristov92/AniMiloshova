@@ -5,11 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ani Miloshova – Paintings</title>
   <meta name="description" content="Paintings and drawings by Ani Miloshova – colourful landscapes, flowers, portraits and abstract works.">
+  <!-- SITE ADDRESS: replace https://animiloshova.com/ below (and in robots.txt / sitemap.xml) once the real domain is known. -->
+  <link rel="canonical" href="https://animiloshova.com/">
+  <link rel="alternate" hreflang="en" href="https://animiloshova.com/">
+  <link rel="alternate" hreflang="bg" href="https://animiloshova.com/?lang=bg">
+  <link rel="alternate" hreflang="x-default" href="https://animiloshova.com/">
   <meta property="og:title" content="Ani Miloshova – Paintings">
-  <meta property="og:description" content="Colourful paintings by Ani Miloshova.">
+  <meta property="og:description" content="Cozy, nostalgic paintings by Ani Miloshova: cottages with flowers, misty forests, old streets and a little bit of magic.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://animiloshova.com/">
+  <meta property="og:image" content="https://animiloshova.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Paintings by Ani Miloshova">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="bg_BG">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#ff5d73">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='22' cy='26' r='16' fill='%23ff5d73'/%3E%3Ccircle cx='42' cy='24' r='14' fill='%23ffc23d'/%3E%3Ccircle cx='32' cy='42' r='15' fill='%2300b8a9'/%3E%3C/svg%3E">
+
+  <!-- Tells Google who the artist is (shown in search results). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ani Miloshova",
+    "alternateName": "Ани Милошова",
+    "jobTitle": "Artist",
+    "description": "Bulgarian artist painting cozy, nostalgic works in oil, acrylic and watercolour.",
+    "url": "https://animiloshova.com/",
+    "image": "https://animiloshova.com/images/photos/ani-about.jpg",
+    "nationality": "Bulgarian",
+    "sameAs": ["https://www.instagram.com/cozy.art.by.ani/"]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +47,13 @@
   <script>
     // Apply the saved colour theme before the page paints (avoids a flash of the default theme).
     try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+    // Language: ?lang=bg / ?lang=en in the address, else the last choice, else the browser's language.
+    (function () {
+      var lang = (location.search.match(/[?&]lang=(bg|en)\b/) || [])[1], saved = null;
+      try { saved = localStorage.getItem("lang"); } catch (e) {}
+      lang = lang || saved || (/^bg\b/i.test(navigator.language || "") ? "bg" : "en");
+      document.documentElement.lang = lang;
+    })();
   </script>
 </head>
 <body>
@@ -25,18 +61,20 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" data-site="name">Ani Miloshova</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <button class="nav-toggle" aria-label="Open menu" data-i18n-aria="menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav" id="site-nav">
-        <a href="#gallery">Gallery</a>
-        <a href="#studio">Studio</a>
-        <a href="#about">About</a>
-        <a href="#commissions">Commissions</a>
-        <a href="#contact">Contact</a>
+        <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+        <a href="#studio" data-i18n="nav_studio">Studio</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#commissions" data-i18n="nav_commissions">Commissions</a>
+        <a href="#prints" data-i18n="nav_prints">Prints</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
+      <a class="lang-switch" id="lang-switch" href="?lang=bg" hreflang="bg" lang="bg" aria-label="Български">БГ</a>
       <div class="theme-switch">
-        <button class="theme-toggle" type="button" aria-label="Change colour theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">
+        <button class="theme-toggle" type="button" aria-label="Change colour theme" data-i18n-aria="theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">
           <span class="swatch" aria-hidden="true"></span>
         </button>
         <ul class="theme-menu" id="theme-menu" role="menu" hidden></ul>
@@ -57,11 +95,11 @@
           <p class="hero-tagline" data-site="tagline"></p>
           <p class="hero-intro" data-site="intro"></p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#gallery">See the paintings</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <a class="btn btn-primary" href="#gallery" data-i18n="hero_see">See the paintings</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero_contact">Get in touch</a>
           </div>
         </div>
-        <div class="hero-art" id="hero-art" aria-label="Featured paintings"></div>
+        <div class="hero-art" id="hero-art" aria-label="Featured paintings" data-i18n-aria="featured"></div>
       </div>
     </section>
 
@@ -69,12 +107,12 @@
     <section class="section" id="gallery">
       <div class="container">
         <div class="section-head">
-          <h2>Gallery</h2>
-          <p>Click on a painting to see it bigger and read its story.</p>
+          <h2 data-i18n="gallery_title">Gallery</h2>
+          <p data-i18n="gallery_intro">Click on a painting to see it bigger and read its story.</p>
         </div>
-        <div class="filters" id="filters" role="toolbar" aria-label="Filter paintings"></div>
+        <div class="filters" id="filters" role="toolbar" aria-label="Filter paintings" data-i18n-aria="filters"></div>
         <div class="grid" id="grid" aria-live="polite">
-          <p class="loading">Loading paintings…</p>
+          <p class="loading" data-i18n="loading">Loading paintings…</p>
         </div>
       </div>
     </section>
@@ -138,8 +176,20 @@
           <h2 id="commissions-title">Commissions</h2>
           <p id="commissions-intro"></p>
         </div>
-        <div class="services" id="services"></div>
+        <div class="services" id="commissions-items"></div>
         <p class="services-note" id="commissions-note" hidden></p>
+      </div>
+    </section>
+
+    <!-- PRINTS & CARDS -->
+    <section class="section section-tint" id="prints" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="prints-title">Prints &amp; cards</h2>
+          <p id="prints-intro"></p>
+        </div>
+        <div class="services" id="prints-items"></div>
+        <p class="services-note" id="prints-note" hidden></p>
       </div>
     </section>
 
@@ -163,13 +213,71 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section section-tint" id="faq" hidden>
+      <div class="container faq">
+        <div class="section-head">
+          <h2 id="faq-title">Questions &amp; answers</h2>
+          <p id="faq-intro"></p>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section section-insta" id="instagram" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="insta-title">Follow along on Instagram</h2>
+          <p id="insta-text"></p>
+        </div>
+        <div class="insta-grid" id="insta-grid"></div>
+        <p class="insta-cta"><a class="btn btn-primary" id="insta-link" href="#" target="_blank" rel="noopener"></a></p>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="section" id="contact">
       <div class="container contact">
-        <h2>Let's talk</h2>
+        <h2 data-i18n="contact_title">Let's talk</h2>
         <p class="contact-text" id="contact-text"></p>
         <div class="contact-cards" id="contact-cards"></div>
         <div class="social" id="social"></div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <h3 data-i18n="form_title">Send me a message</h3>
+          <div class="form-row">
+            <label><span data-i18n="form_name">Your name</span>
+              <input name="name" type="text" autocomplete="name" required></label>
+            <label><span data-i18n="form_email">Your email</span>
+              <input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label><span data-i18n="form_subject">What is it about?</span>
+            <input name="subject" id="form-subject" type="text"></label>
+          <label><span data-i18n="form_message">Message</span>
+            <textarea name="message" rows="5" required></textarea></label>
+          <!-- Hidden from people; spam bots fill it in and get ignored. -->
+          <input class="hp" name="_gotcha" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-primary" type="submit" data-i18n="form_send">Send</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter" id="newsletter" hidden>
+      <div class="container newsletter-inner">
+        <div>
+          <h2 id="newsletter-title">Hear about new paintings first</h2>
+          <p id="newsletter-text"></p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label class="sr-only" for="newsletter-email" data-i18n="form_email">Your email</label>
+          <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <input class="hp" name="_gotcha" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-primary" type="submit" data-i18n="newsletter_join">Sign me up</button>
+          <p class="form-status" id="newsletter-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -177,27 +285,29 @@
   <footer class="site-footer">
     <div class="container footer-cols">
       <div class="footer-col">
-        <h4>Gallery</h4>
+        <h4 data-i18n="footer_gallery">Gallery</h4>
         <div class="footer-thumbs" id="footer-thumbs"></div>
       </div>
       <div class="footer-col">
-        <h4>About me</h4>
+        <h4 data-i18n="footer_about">About me</h4>
         <p id="footer-about"></p>
       </div>
       <div class="footer-col">
-        <h4>Contacts</h4>
+        <h4 data-i18n="footer_contacts">Contacts</h4>
         <ul class="footer-contacts" id="footer-contacts"></ul>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#gallery">Gallery</a>
-          <a href="#studio">Studio</a>
-          <a href="#about">About</a>
-          <a href="#commissions">Commissions</a>
-          <a href="#contact">Contact</a>
+          <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+          <a href="#studio" data-i18n="nav_studio">Studio</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#commissions" data-i18n="nav_commissions">Commissions</a>
+          <a href="#prints" data-i18n="nav_prints">Prints</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year"></span> <span data-site="name">Ani Miloshova</span>. All paintings are protected by copyright.</p>
+      <p>© <span id="year"></span> <span data-site="name">Ani Miloshova</span>. <span data-i18n="copyright">All paintings are protected by copyright.</span></p>
     </div>
   </footer>
 
@@ -206,15 +316,18 @@
     <div class="lb-top">
       <span class="lb-counter" id="lb-counter"></span>
       <div class="lb-tools">
-        <button class="lb-btn lb-info-toggle" id="lb-info-toggle" type="button" aria-pressed="true" aria-label="Show or hide the details (I)" title="Show / hide details (I)">i</button>
-        <button class="lb-btn" id="lb-close" type="button" aria-label="Close (Esc)" title="Close (Esc)">×</button>
+        <button class="lb-btn lb-zoom" id="lb-zoom" type="button" aria-pressed="false" aria-label="Zoom in (Z)" data-i18n-aria="zoom" title="Zoom (Z)">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="square"/><path d="M7.5 10.5h6" stroke="currentColor" stroke-width="2"/><path class="lb-zoom-plus" d="M10.5 7.5v6" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <button class="lb-btn lb-info-toggle" id="lb-info-toggle" type="button" aria-pressed="true" aria-label="Show or hide the details (I)" data-i18n-aria="info" title="Show / hide details (I)">i</button>
+        <button class="lb-btn" id="lb-close" type="button" aria-label="Close (Esc)" data-i18n-aria="close" title="Close (Esc)">×</button>
       </div>
     </div>
-    <button class="lb-nav lb-prev" id="lb-prev" type="button" aria-label="Previous painting">‹</button>
-    <button class="lb-nav lb-next" id="lb-next" type="button" aria-label="Next painting">›</button>
+    <button class="lb-nav lb-prev" id="lb-prev" type="button" aria-label="Previous painting" data-i18n-aria="prev">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" type="button" aria-label="Next painting" data-i18n-aria="next">›</button>
     <div class="lb-stage">
-      <figure class="lb-figure">
-        <img id="lb-img" src="" alt="">
+      <figure class="lb-figure" id="lb-figure">
+        <img id="lb-img" src="" alt="" draggable="false">
       </figure>
       <aside class="lb-label">
         <span class="lb-category" id="lb-category"></span>
@@ -223,7 +336,7 @@
         <dl class="lb-meta" id="lb-meta"></dl>
         <p class="lb-desc" id="lb-desc"></p>
         <span class="status" id="lb-status"></span>
-        <div><a class="lb-ask" id="lb-ask" href="#">Ask about this painting →</a></div>
+        <div><a class="lb-ask" id="lb-ask" href="#contact">Ask about this painting →</a></div>
       </aside>
     </div>
   </dialog>

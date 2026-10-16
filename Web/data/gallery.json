@@ -1,193 +1,264 @@
 {
   "categories": [
-    { "id": "places", "label": "Houses & towns" },
-    { "id": "landscape", "label": "Landscapes" },
-    { "id": "flowers", "label": "Flowers & still life" },
-    { "id": "animals", "label": "Animals & fantasy" },
-    { "id": "portrait", "label": "Portraits & figures" }
+    { "id": "places", "label": "Houses & towns", "label_bg": "Къщи и градове" },
+    { "id": "landscape", "label": "Landscapes", "label_bg": "Пейзажи" },
+    { "id": "flowers", "label": "Flowers & still life", "label_bg": "Цветя и натюрморти" },
+    { "id": "animals", "label": "Animals & fantasy", "label_bg": "Животни и фантазия" },
+    { "id": "portrait", "label": "Portraits & figures", "label_bg": "Портрети и фигури" }
   ],
 
   "artworks": [
     {
       "id": "ginger-cat",
       "title": "Ginger Cat in the Meadow",
+      "title_bg": "Рижа котка в ливадата",
       "image": "images/gallery/ginger-cat.jpg",
       "thumb": "images/gallery/thumbs/ginger-cat.jpg",
       "category": "animals",
       "description": "A ginger cat sitting among yellow wildflowers, looking at the hills under a soft pink evening sky.",
+      "description_bg": "Рижа котка, седнала сред жълти полски цветя, гледа хълмовете под нежно розово вечерно небе.",
       "featured": true
     },
     {
       "id": "lady-with-umbrella",
       "title": "Lady with the Lace Umbrella",
+      "title_bg": "Дама с дантелен чадър",
       "image": "images/gallery/lady-with-umbrella.jpg",
       "thumb": "images/gallery/thumbs/lady-with-umbrella.jpg",
       "category": "portrait",
       "technique": "Watercolour",
-      "description": "A lady in a dark gown with a lace umbrella, butterflies around her and a little black cat at her feet, among bare trees and mist."
+      "technique_bg": "Акварел",
+      "description": "A lady in a dark gown with a lace umbrella, butterflies around her and a little black cat at her feet, among bare trees and mist.",
+      "description_bg": "Дама в тъмна рокля с дантелен чадър, пеперуди около нея и малка черна котка в краката ѝ, сред голи дървета и мъгла."
     },
     {
       "id": "cottage-with-wildflowers",
       "title": "Cottage with Wildflowers",
+      "title_bg": "Къщичка с полски цветя",
       "image": "images/gallery/cottage-with-wildflowers.jpg",
       "thumb": "images/gallery/thumbs/cottage-with-wildflowers.jpg",
       "category": "places",
-      "description": "An old village house with a red roof, almost hidden by a garden full of wildflowers. Born to live in a cozy cottage with flowers everywhere…"
+      "description": "An old village house with a red roof, almost hidden by a garden full of wildflowers. Born to live in a cozy cottage with flowers everywhere…",
+      "description_bg": "Стара селска къща с червен покрив, почти скрита в градина, пълна с полски цветя. Родена да живее в уютна къщичка, потънала в цветя…",
+      "status": "available",
+      "price": "280 €"
     },
     {
       "id": "pegasus",
       "title": "Pegasus",
+      "title_bg": "Пегас",
       "image": "images/gallery/pegasus.jpg",
       "thumb": "images/gallery/thumbs/pegasus.jpg",
       "category": "animals",
       "description": "A white winged horse leaping through pink and blue clouds above a field of flowers.",
+      "description_bg": "Бял крилат кон лети през розови и сини облаци над поле с цветя.",
+      "status": "sold",
       "featured": true
     },
     {
       "id": "venice-in-the-rain",
       "title": "Venice in the Rain",
+      "title_bg": "Венеция в дъжда",
       "image": "images/gallery/venice-in-the-rain.jpg",
       "thumb": "images/gallery/thumbs/venice-in-the-rain.jpg",
       "category": "places",
       "technique": "Watercolour",
+      "technique_bg": "Акварел",
       "mood": "Rainy and Elaborate",
-      "description": "Piazza San Marco on a rainy evening: warm lights reflected on the wet stones and little red umbrellas."
+      "mood_bg": "Дъждовна и изящна",
+      "description": "Piazza San Marco on a rainy evening: warm lights reflected on the wet stones and little red umbrellas.",
+      "description_bg": "Площад „Сан Марко“ в дъждовна вечер: топли светлини, отразени в мокрите камъни, и малки червени чадъри.",
+      "status": "sold"
     },
     {
       "id": "herbarium",
       "title": "Herbarium",
+      "title_bg": "Хербарий",
       "image": "images/gallery/herbarium.jpg",
       "thumb": "images/gallery/thumbs/herbarium.jpg",
       "category": "flowers",
       "technique": "Watercolour",
+      "technique_bg": "Акварел",
       "mood": "Herbal and Cozy",
-      "description": "Delicate botanical study of mint, thyme and wild herbs in a gold frame."
+      "mood_bg": "Билкова и уютна",
+      "description": "Delicate botanical study of mint, thyme and wild herbs in a gold frame.",
+      "description_bg": "Нежна ботаническа рисунка на мента, мащерка и диви билки в златна рамка.",
+      "status": "available",
+      "price": "180 €"
     },
     {
       "id": "white-goose",
       "title": "White Goose",
+      "title_bg": "Бяла гъска",
       "image": "images/gallery/white-goose.jpg",
       "thumb": "images/gallery/thumbs/white-goose.jpg",
       "category": "animals",
       "technique": "Oil",
+      "technique_bg": "Маслени бои",
       "description": "A proud white goose in front of an old farmhouse, painted in warm, golden summer light.",
+      "description_bg": "Горда бяла гъска пред стара селска къща, нарисувана в топла, златиста лятна светлина.",
       "featured": true
     },
     {
       "id": "cabin-in-the-mist",
       "title": "Cabin in the Misty Forest",
+      "title_bg": "Хижа в мъгливата гора",
       "image": "images/gallery/cabin-in-the-mist.jpg",
       "thumb": "images/gallery/thumbs/cabin-in-the-mist.jpg",
       "category": "landscape",
       "technique": "Watercolour",
+      "technique_bg": "Акварел",
       "mood": "Forest and Chill",
-      "description": "A little red-roofed cabin at the edge of a pine forest, with the morning mist still hanging between the trees."
+      "mood_bg": "Горска и спокойна",
+      "description": "A little red-roofed cabin at the edge of a pine forest, with the morning mist still hanging between the trees.",
+      "description_bg": "Малка хижа с червен покрив в края на борова гора, а утринната мъгла още виси между дърветата.",
+      "status": "available",
+      "price": "160 €"
     },
     {
       "id": "still-life-with-jug",
       "title": "Still Life with Jug and Apples",
+      "title_bg": "Натюрморт с кана и ябълки",
       "image": "images/gallery/still-life-with-jug.jpg",
       "thumb": "images/gallery/thumbs/still-life-with-jug.jpg",
       "category": "flowers",
       "mood": "Vibrant and Cheerful",
-      "description": "A copper jug, an old bottle and a glass carafe with two apples, in front of bright rainbow drapery."
+      "mood_bg": "Жизнерадостна и цветна",
+      "description": "A copper jug, an old bottle and a glass carafe with two apples, in front of bright rainbow drapery.",
+      "description_bg": "Медна кана, стара бутилка и стъклена гарафа с две ябълки пред ярка драперия в цветовете на дъгата."
     },
     {
       "id": "black-swans",
       "title": "Black Swans",
+      "title_bg": "Черни лебеди",
       "image": "images/gallery/black-swans.jpg",
       "thumb": "images/gallery/thumbs/black-swans.jpg",
       "category": "animals",
       "technique": "Watercolour",
+      "technique_bg": "Акварел",
       "mood": "Dark and Elegant",
-      "description": "Three black swans gliding over a misty lilac lake."
+      "mood_bg": "Тъмна и елегантна",
+      "description": "Three black swans gliding over a misty lilac lake.",
+      "description_bg": "Три черни лебеда се плъзгат по мъгливо лилаво езеро."
     },
     {
       "id": "old-town-house",
       "title": "Old Town House",
+      "title_bg": "Старинна къща",
       "image": "images/gallery/old-town-house.jpg",
       "thumb": "images/gallery/thumbs/old-town-house.jpg",
       "category": "places",
-      "description": "A traditional Bulgarian house with white walls, wooden bay windows and a stone-paved street, with grapevines over the gate."
+      "description": "A traditional Bulgarian house with white walls, wooden bay windows and a stone-paved street, with grapevines over the gate.",
+      "description_bg": "Традиционна българска къща с бели стени, дървени еркери и калдъръмена улица, с асма над портата."
     },
     {
       "id": "peonies",
       "title": "Peonies",
+      "title_bg": "Божури",
       "image": "images/gallery/peonies.jpg",
       "thumb": "images/gallery/thumbs/peonies.jpg",
       "category": "flowers",
-      "description": "Big, blooming peonies in cream, pink and coral, painted with loose and expressive strokes."
+      "description": "Big, blooming peonies in cream, pink and coral, painted with loose and expressive strokes.",
+      "description_bg": "Големи, разцъфнали божури в кремаво, розово и коралово, нарисувани със свободни и експресивни мазки.",
+      "status": "available",
+      "price": "220 €"
     },
     {
       "id": "unicorn-in-the-mist",
       "title": "Unicorn in the Misty Valley",
+      "title_bg": "Еднорог в мъгливата долина",
       "image": "images/gallery/unicorn-in-the-mist.jpg",
       "thumb": "images/gallery/thumbs/unicorn-in-the-mist.jpg",
       "category": "animals",
       "mood": "Misty and Magical",
-      "description": "A white unicorn running through a green valley where the fog is rising from the hills."
+      "mood_bg": "Мъглива и вълшебна",
+      "description": "A white unicorn running through a green valley where the fog is rising from the hills.",
+      "description_bg": "Бял еднорог тича през зелена долина, където мъглата се вдига от хълмовете."
     },
     {
       "id": "old-house-in-autumn",
       "title": "Old House in Autumn",
+      "title_bg": "Стара къща през есента",
       "image": "images/gallery/old-house-in-autumn.jpg",
       "thumb": "images/gallery/thumbs/old-house-in-autumn.jpg",
       "category": "places",
       "technique": "Watercolour",
+      "technique_bg": "Акварел",
       "mood": "Cottage and Nostalgic",
-      "description": "A yellow village house with blue shutters, surrounded by autumn trees."
+      "mood_bg": "Уютна и носталгична",
+      "description": "A yellow village house with blue shutters, surrounded by autumn trees.",
+      "description_bg": "Жълта селска къща със сини капаци, заобиколена от есенни дървета.",
+      "status": "available",
+      "price": "150 €"
     },
     {
       "id": "portrait-of-a-girl",
       "title": "Portrait of a Girl",
+      "title_bg": "Портрет на момиче",
       "image": "images/gallery/portrait-of-a-girl.jpg",
       "thumb": "images/gallery/thumbs/portrait-of-a-girl.jpg",
       "category": "portrait",
       "technique": "Watercolour",
-      "description": "A dreamy portrait of a girl with long golden hair, on a deep blue background."
+      "technique_bg": "Акварел",
+      "description": "A dreamy portrait of a girl with long golden hair, on a deep blue background.",
+      "description_bg": "Мечтателен портрет на момиче с дълга златиста коса на тъмносин фон."
     },
     {
       "id": "autumn-by-the-rocks",
       "title": "Autumn by the Rocks",
+      "title_bg": "Есен край скалите",
       "image": "images/gallery/autumn-by-the-rocks.jpg",
       "thumb": "images/gallery/thumbs/autumn-by-the-rocks.jpg",
       "category": "landscape",
       "mood": "Breathtaking and Adventurous",
-      "description": "Orange, red and golden trees in front of a huge white rock with a cave."
+      "mood_bg": "Спираща дъха и приключенска",
+      "description": "Orange, red and golden trees in front of a huge white rock with a cave.",
+      "description_bg": "Оранжеви, червени и златисти дървета пред огромна бяла скала с пещера."
     },
     {
       "id": "rose-and-butterfly",
       "title": "Rose and Butterfly",
+      "title_bg": "Роза и пеперуда",
       "image": "images/gallery/rose-and-butterfly.jpg",
       "thumb": "images/gallery/thumbs/rose-and-butterfly.jpg",
       "category": "flowers",
       "mood": "Vintage and Romantic",
-      "description": "A single red rose and a pink butterfly on an aged, golden background in an ornate frame."
+      "mood_bg": "Винтидж и романтична",
+      "description": "A single red rose and a pink butterfly on an aged, golden background in an ornate frame.",
+      "description_bg": "Една червена роза и розова пеперуда на състарен златист фон в орнаментирана рамка.",
+      "status": "available"
     },
     {
       "id": "rainy-day-in-the-city",
       "title": "Rainy Day in the City",
+      "title_bg": "Дъждовен ден в града",
       "image": "images/gallery/rainy-day-in-the-city.jpg",
       "thumb": "images/gallery/thumbs/rainy-day-in-the-city.jpg",
       "category": "places",
       "technique": "Watercolour",
-      "description": "A vintage street scene: people in long coats, a little girl in red, an old car and wet pavements."
+      "technique_bg": "Акварел",
+      "description": "A vintage street scene: people in long coats, a little girl in red, an old car and wet pavements.",
+      "description_bg": "Винтидж улична сцена: хора в дълги палта, малко момиченце в червено, стара кола и мокри тротоари."
     },
     {
       "id": "yellow-palace",
       "title": "The Yellow Palace",
+      "title_bg": "Жълтият дворец",
       "image": "images/gallery/yellow-palace.jpg",
       "thumb": "images/gallery/thumbs/yellow-palace.jpg",
       "category": "places",
-      "description": "A sunny yellow palace with white columns and red roofs on a bright summer day."
+      "description": "A sunny yellow palace with white columns and red roofs on a bright summer day.",
+      "description_bg": "Слънчев жълт дворец с бели колони и червени покриви в ярък летен ден."
     },
     {
       "id": "still-life-with-pomegranate",
       "title": "Still Life with Pomegranate",
+      "title_bg": "Натюрморт с нар",
       "image": "images/gallery/still-life-with-pomegranate.jpg",
       "thumb": "images/gallery/thumbs/still-life-with-pomegranate.jpg",
       "category": "flowers",
-      "description": "A wicker bottle, a glass jar with rosehip branches, a pomegranate and a lemon on deep blue drapery."
+      "description": "A wicker bottle, a glass jar with rosehip branches, a pomegranate and a lemon on deep blue drapery.",
+      "description_bg": "Плетена бутилка, стъклен буркан с клонки шипка, нар и лимон върху тъмносиня драперия."
     }
   ]
 }

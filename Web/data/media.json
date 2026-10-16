@@ -1,27 +1,33 @@
 {
   "videos": {
     "title": "In the studio",
+    "title_bg": "В ателието",
     "intro": "Little moments from the making of the paintings.",
+    "intro_bg": "Малки моменти от създаването на картините.",
     "items": [
       {
         "src": "videos/ani-with-her-paintings.mp4",
         "poster": "videos/posters/ani-with-her-paintings.jpg",
-        "title": "Ani with her paintings"
+        "title": "Ani with her paintings",
+        "title_bg": "Ани с картините си"
       },
       {
         "src": "videos/chamomile-watercolour.mp4",
         "poster": "videos/posters/chamomile-watercolour.jpg",
-        "title": "A little bit of old-world magic"
+        "title": "A little bit of old-world magic",
+        "title_bg": "Малко старинна магия"
       },
       {
         "src": "videos/pegasus-in-progress.mp4",
         "poster": "videos/posters/pegasus-in-progress.jpg",
-        "title": "Art in progress"
+        "title": "Art in progress",
+        "title_bg": "Картина в процес"
       },
       {
         "src": "videos/old-house-watercolour.mp4",
         "poster": "videos/posters/old-house-watercolour.jpg",
-        "title": "Old Town House"
+        "title": "Old Town House",
+        "title_bg": "Старинна къща"
       },
       {
         "src": "videos/portrait-in-progress.mp4",
@@ -31,32 +37,36 @@
       {
         "src": "videos/horse-paintings.mp4",
         "poster": "videos/posters/horse-paintings.jpg",
-        "title": "Desert horses"
+        "title": "Desert horses",
+        "title_bg": "Коне в пустинята"
       },
       {
         "src": "videos/the-world-needs-your-art.mp4",
         "poster": "videos/posters/the-world-needs-your-art.jpg",
-        "title": "Dear artists, the world needs your art"
+        "title": "Dear artists, the world needs your art",
+        "title_bg": "Скъпи художници, светът има нужда от вашето изкуство"
       },
       {
         "src": "videos/digital-portrait.mp4",
         "poster": "videos/posters/digital-portrait.jpg",
-        "title": "Digital portrait, painted in Procreate"
+        "title": "Digital portrait, painted in Procreate",
+        "title_bg": "Дигитален портрет, нарисуван в Procreate"
       }
     ]
   },
 
   "photos": {
     "title": "Behind the easel",
+    "title_bg": "Зад статива",
     "items": [
-      { "src": "images/photos/ani-easel-1.jpg", "alt": "Ani in a long cream dress next to an easel with the Pegasus painting" },
-      { "src": "images/photos/ani-easel-3.jpg", "alt": "Ani holding the framed Pegasus painting among wildflowers" },
-      { "src": "images/photos/ani-painting-goose.jpg", "alt": "Painting the White Goose" },
-      { "src": "images/photos/ani-easel-2.jpg", "alt": "Ani next to the Old Town House painting on an easel" },
-      { "src": "images/photos/ani-easel-4.jpg", "alt": "Ani holding the framed Herbarium" },
-      { "src": "images/photos/ani-easel-5.jpg", "alt": "Ani painting the White Goose outdoors" },
-      { "src": "images/photos/ani-palette.jpg", "alt": "Ani's palette full of oil paints" },
-      { "src": "images/photos/ani-easel-6.jpg", "alt": "Ani sitting among wild flowers" }
+      { "src": "images/photos/ani-easel-1.jpg", "alt": "Ani in a long cream dress next to an easel with the Pegasus painting", "alt_bg": "Ани в дълга кремава рокля до статив с картината с Пегас" },
+      { "src": "images/photos/ani-easel-3.jpg", "alt": "Ani holding the framed Pegasus painting among wildflowers", "alt_bg": "Ани държи картината с Пегас в рамка сред полски цветя" },
+      { "src": "images/photos/ani-painting-goose.jpg", "alt": "Painting the White Goose", "alt_bg": "Рисуване на „Бяла гъска“" },
+      { "src": "images/photos/ani-easel-2.jpg", "alt": "Ani next to the Old Town House painting on an easel", "alt_bg": "Ани до картината „Старинна къща“ на статив" },
+      { "src": "images/photos/ani-easel-4.jpg", "alt": "Ani holding the framed Herbarium", "alt_bg": "Ани държи „Хербарий“ в рамка" },
+      { "src": "images/photos/ani-easel-5.jpg", "alt": "Ani painting the White Goose outdoors", "alt_bg": "Ани рисува „Бяла гъска“ навън" },
+      { "src": "images/photos/ani-palette.jpg", "alt": "Ani's palette full of oil paints", "alt_bg": "Палитрата на Ани, пълна с маслени бои" },
+      { "src": "images/photos/ani-easel-6.jpg", "alt": "Ani sitting among wild flowers", "alt_bg": "Ани седи сред полски цветя" }
     ]
   }
 }
