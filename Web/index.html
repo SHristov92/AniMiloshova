@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ani Miloshova – Paintings</title>
+  <meta name="description" content="Paintings and drawings by Ani Miloshova – colourful landscapes, flowers, portraits and abstract works.">
+  <meta property="og:title" content="Ani Miloshova – Paintings">
+  <meta property="og:description" content="Colourful paintings by Ani Miloshova.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ff5d73">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='22' cy='26' r='16' fill='%23ff5d73'/%3E%3Ccircle cx='42' cy='24' r='14' fill='%23ffc23d'/%3E%3Ccircle cx='32' cy='42' r='15' fill='%2300b8a9'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" data-site="name">Ani Miloshova</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#gallery">Gallery</a>
+        <a href="#studio">Studio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="blob blob-3" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow" data-site="role">Artist</p>
+          <h1 data-site="name">Ani Miloshova</h1>
+          <p class="hero-tagline" data-site="tagline"></p>
+          <p class="hero-intro" data-site="intro"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#gallery">See the paintings</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-art" id="hero-art" aria-label="Featured paintings"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>Gallery</h2>
+          <p>Click on a painting to see it bigger and read its story.</p>
+        </div>
+        <div class="filters" id="filters" role="toolbar" aria-label="Filter paintings"></div>
+        <div class="grid" id="grid" aria-live="polite">
+          <p class="loading">Loading paintings…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO VIDEOS -->
+    <section class="section section-dark" id="studio" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="studio-title">In the studio</h2>
+          <p id="studio-intro"></p>
+        </div>
+        <div class="videos" id="videos"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-tint" id="about">
+      <div class="container about">
+        <div class="about-photo">
+          <img id="about-photo" src="" alt="Ani Miloshova" loading="lazy">
+        </div>
+        <div class="about-text">
+          <h2 id="about-title">About me</h2>
+          <blockquote class="about-quote" id="about-quote" hidden></blockquote>
+          <div id="about-paragraphs"></div>
+          <div class="facts" id="facts" hidden></div>
+        </div>
+      </div>
+
+      <div class="moments" id="moments" hidden>
+        <h3 class="container" id="moments-title">Behind the easel</h3>
+        <div class="moments-strip" id="moments-strip"></div>
+      </div>
+
+      <div class="container timeline" id="timeline" hidden>
+        <h3 id="timeline-title">My story</h3>
+        <ol id="timeline-list"></ol>
+      </div>
+    </section>
+
+    <!-- PRESS -->
+    <section class="section section-press" id="press" hidden>
+      <div class="container">
+        <div class="section-head">
+          <h2 id="press-title">Featured in</h2>
+        </div>
+        <div class="press-list" id="press-list"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h2>Let's talk</h2>
+        <p class="contact-text" id="contact-text"></p>
+        <div class="contact-cards" id="contact-cards"></div>
+        <div class="social" id="social"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span data-site="name">Ani Miloshova</span>. All paintings are protected by copyright.</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous painting">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next painting">›</button>
+    <div class="lb-body">
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="">
+      </figure>
+      <div class="lb-info">
+        <span class="lb-category" id="lb-category"></span>
+        <h3 id="lb-title"></h3>
+        <p class="lb-mood" id="lb-mood" hidden></p>
+        <dl class="lb-meta" id="lb-meta"></dl>
+        <p class="lb-desc" id="lb-desc"></p>
+        <span class="status" id="lb-status"></span>
+        <a class="btn btn-primary lb-ask" id="lb-ask" href="#">Ask about this painting</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

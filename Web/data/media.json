@@ -1,0 +1,62 @@
+{
+  "videos": {
+    "title": "In the studio",
+    "intro": "Little moments from the making of the paintings.",
+    "items": [
+      {
+        "src": "videos/ani-with-her-paintings.mp4",
+        "poster": "videos/posters/ani-with-her-paintings.jpg",
+        "title": "Ani with her paintings"
+      },
+      {
+        "src": "videos/chamomile-watercolour.mp4",
+        "poster": "videos/posters/chamomile-watercolour.jpg",
+        "title": "A little bit of old-world magic"
+      },
+      {
+        "src": "videos/pegasus-in-progress.mp4",
+        "poster": "videos/posters/pegasus-in-progress.jpg",
+        "title": "Art in progress"
+      },
+      {
+        "src": "videos/old-house-watercolour.mp4",
+        "poster": "videos/posters/old-house-watercolour.jpg",
+        "title": "Old Town House"
+      },
+      {
+        "src": "videos/portrait-in-progress.mp4",
+        "poster": "videos/posters/portrait-in-progress.jpg",
+        "title": "The art AI could never take away from us"
+      },
+      {
+        "src": "videos/horse-paintings.mp4",
+        "poster": "videos/posters/horse-paintings.jpg",
+        "title": "Desert horses"
+      },
+      {
+        "src": "videos/the-world-needs-your-art.mp4",
+        "poster": "videos/posters/the-world-needs-your-art.jpg",
+        "title": "Dear artists, the world needs your art"
+      },
+      {
+        "src": "videos/digital-portrait.mp4",
+        "poster": "videos/posters/digital-portrait.jpg",
+        "title": "Digital portrait, painted in Procreate"
+      }
+    ]
+  },
+
+  "photos": {
+    "title": "Behind the easel",
+    "items": [
+      { "src": "images/photos/ani-easel-1.jpg", "alt": "Ani in a long cream dress next to an easel with the Pegasus painting" },
+      { "src": "images/photos/ani-easel-3.jpg", "alt": "Ani holding the framed Pegasus painting among wildflowers" },
+      { "src": "images/photos/ani-painting-goose.jpg", "alt": "Painting the White Goose" },
+      { "src": "images/photos/ani-easel-2.jpg", "alt": "Ani next to the Old Town House painting on an easel" },
+      { "src": "images/photos/ani-easel-4.jpg", "alt": "Ani holding the framed Herbarium" },
+      { "src": "images/photos/ani-easel-5.jpg", "alt": "Ani painting the White Goose outdoors" },
+      { "src": "images/photos/ani-palette.jpg", "alt": "Ani's palette full of oil paints" },
+      { "src": "images/photos/ani-easel-6.jpg", "alt": "Ani sitting among wild flowers" }
+    ]
+  }
+}
