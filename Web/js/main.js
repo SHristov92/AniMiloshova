@@ -250,7 +250,7 @@
     var bar = $("#filters");
     bar.innerHTML = "";
     if (state.categories.length < 2) return;
-    var all = [{ id: "all", label: "All", color: "#23202b" }].concat(state.categories);
+    var all = [{ id: "all", label: "All", color: "var(--coral)" }].concat(state.categories);
     all.forEach(function (c) {
       var chip = el("button", {
         type: "button",
@@ -573,6 +573,67 @@
       nav.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
     }
+  });
+
+  /* ---------- Colour themes ---------- */
+
+  // Colours for each theme live in css/style.css ([data-theme="..."]); the first one is the default.
+  // a/b are the two halves of the little swatch shown next to each name.
+  var THEMES = [
+    { id: "default", label: "Classic", a: "#ff5d73", b: "#fffdf9", meta: "#ff5d73" },
+    { id: "dark",    label: "Dark",    a: "#ff5d73", b: "#16141b", meta: "#16141b" },
+    { id: "ocean",   label: "Ocean",   a: "#0077b6", b: "#48cae4", meta: "#0077b6" },
+    { id: "sunset",  label: "Sunset",  a: "#e63946", b: "#f4a261", meta: "#e63946" },
+    { id: "forest",  label: "Forest",  a: "#2d6a4f", b: "#d4a373", meta: "#2d6a4f" }
+  ];
+
+  var themeToggle = $(".theme-toggle");
+  var themeMenu = $("#theme-menu");
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || "default";
+  }
+
+  function applyTheme(id) {
+    var theme = THEMES.filter(function (t) { return t.id === id; })[0] || THEMES[0];
+    if (theme.id === "default") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", theme.id);
+    try {
+      if (theme.id === "default") localStorage.removeItem("theme");
+      else localStorage.setItem("theme", theme.id);
+    } catch (e) { /* storage blocked: the theme still applies for this visit */ }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", theme.meta);
+    Array.prototype.forEach.call(themeMenu.querySelectorAll("button"), function (b) {
+      b.setAttribute("aria-checked", String(b.getAttribute("data-theme-id") === theme.id));
+    });
+  }
+
+  function setThemeMenu(open) {
+    themeMenu.hidden = !open;
+    themeToggle.setAttribute("aria-expanded", String(open));
+  }
+
+  THEMES.forEach(function (t) {
+    var swatch = el("span", { class: "swatch", "aria-hidden": "true", style: "--a:" + t.a + ";--b:" + t.b });
+    var button = el("button", { type: "button", role: "menuitemradio", "data-theme-id": t.id }, [swatch, document.createTextNode(t.label)]);
+    themeMenu.appendChild(el("li", { role: "none" }, [button]));
+  });
+  applyTheme(currentTheme());
+
+  themeToggle.addEventListener("click", function () { setThemeMenu(themeMenu.hidden); });
+  themeMenu.addEventListener("click", function (e) {
+    var button = e.target.closest("button");
+    if (!button) return;
+    applyTheme(button.getAttribute("data-theme-id"));
+    setThemeMenu(false);
+    themeToggle.focus();
+  });
+  document.addEventListener("click", function (e) {
+    if (!themeMenu.hidden && !e.target.closest(".theme-switch")) setThemeMenu(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !themeMenu.hidden) { setThemeMenu(false); themeToggle.focus(); }
   });
 
   $("#year").textContent = new Date().getFullYear();

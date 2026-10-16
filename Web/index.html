@@ -15,6 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply the saved colour theme before the page paints (avoids a flash of the default theme).
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
 
@@ -31,6 +35,12 @@
         <a href="#commissions">Commissions</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="theme-switch">
+        <button class="theme-toggle" type="button" aria-label="Change colour theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu">
+          <span class="swatch" aria-hidden="true"></span>
+        </button>
+        <ul class="theme-menu" id="theme-menu" role="menu" hidden></ul>
+      </div>
     </div>
   </header>
 
