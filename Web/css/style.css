@@ -241,6 +241,18 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 
 .section { padding: clamp(64px, 9vw, 110px) 0; }
 .section-tint { background: var(--tint); }
+/* Ornamental divider at the top of each section: the AM emblem from the logo between two fading gold lines. */
+.section { position: relative; }
+.section::before {
+  content: ""; position: absolute; left: 50%; top: clamp(20px, 3vw, 36px); translate: -50% 0;
+  width: min(440px, 76%); height: 30px; pointer-events: none;
+  background:
+    url("../images/logo/emblem.svg") center / auto 100% no-repeat,
+    linear-gradient(90deg, transparent, rgba(185, 120, 48, .55)) left center / calc(50% - 40px) 1px no-repeat,
+    linear-gradient(90deg, rgba(185, 120, 48, .55), transparent) right center / calc(50% - 40px) 1px no-repeat;
+}
+.section-event::before { display: none; }   /* the event continues straight on from the gallery */
+.section-dark::before { filter: brightness(1.7); }   /* a lighter gold so it shows on the taupe band */
 
 .section-head { text-align: center; max-width: 620px; margin: 0 auto 32px; }
 .section-head p { color: var(--muted); margin: 0; }
