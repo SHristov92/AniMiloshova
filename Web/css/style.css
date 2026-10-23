@@ -373,7 +373,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .hero h1 { font-size: clamp(2.8rem, 7vw, 5.2rem); margin-bottom: .2em; }
 /* The hand-lettered logo stands in for the name. It is used as a mask so it takes the theme's text colour. */
 .hero-logo {
-  width: min(100%, 560px); aspect-ratio: 636 / 192; margin: 0 0 .4em;
+  width: min(100%, 560px); aspect-ratio: 636 / 199; margin: 0 0 .4em;
   background: currentColor;
   -webkit-mask: url("../images/logo/wordmark.svg") left center / contain no-repeat;
           mask: url("../images/logo/wordmark.svg") left center / contain no-repeat;
