@@ -29,6 +29,56 @@
       "description_bg": "Жена в тъмна рокля с бродиран корсаж, с дълга коса, развята от вятъра, гледа към дюните по залез."
     },
     {
+      "id": "bankya-mineral-bath",
+      "title": "The Old Mineral Bath in Bankya",
+      "title_bg": "Старата минерална баня в Банкя",
+      "image": "images/gallery/bankya-mineral-bath.jpg",
+      "thumb": "images/gallery/thumbs/bankya-mineral-bath.jpg",
+      "category": "places",
+      "description": "The yellow mineral bathhouse in Bankya with its red roofs, white columns and a round window, framed by pines and garden benches.",
+      "description_bg": "Жълтата минерална баня в Банкя с червени покриви, бели колони и кръгло прозорче, сред борове и пейки в градината."
+    },
+    {
+      "id": "unicorn-in-the-forest",
+      "title": "Unicorn in the Forest",
+      "title_bg": "Еднорог в гората",
+      "image": "images/gallery/unicorn-in-the-forest.jpg",
+      "thumb": "images/gallery/thumbs/unicorn-in-the-forest.jpg",
+      "category": "animals",
+      "description": "A white unicorn with a golden mane walking through a meadow of wildflowers at the edge of a pine forest.",
+      "description_bg": "Бял еднорог със златиста грива върви през поляна с полски цветя в края на борова гора."
+    },
+    {
+      "id": "black-panther",
+      "title": "Black Panther",
+      "title_bg": "Черна пантера",
+      "image": "images/gallery/black-panther.jpg",
+      "thumb": "images/gallery/thumbs/black-panther.jpg",
+      "category": "animals",
+      "description": "A black panther with green eyes resting in the jungle among branches and bright orange bird-of-paradise flowers.",
+      "description_bg": "Черна пантера със зелени очи почива в джунглата сред клони и ярки оранжеви райски птици."
+    },
+    {
+      "id": "roses-in-bloom",
+      "title": "Roses in Bloom",
+      "title_bg": "Разцъфнали рози",
+      "image": "images/gallery/roses-in-bloom.jpg",
+      "thumb": "images/gallery/thumbs/roses-in-bloom.jpg",
+      "category": "flowers",
+      "description": "Big, loose roses in white, pink and orange on a deep teal background, with splashes of gold.",
+      "description_bg": "Големи, свободно нарисувани рози в бяло, розово и оранжево върху тъмнозелен фон, с пръски злато."
+    },
+    {
+      "id": "winter-night",
+      "title": "Winter Night",
+      "title_bg": "Зимна нощ",
+      "image": "images/gallery/winter-night.jpg",
+      "thumb": "images/gallery/thumbs/winter-night.jpg",
+      "category": "places",
+      "description": "Two cats on a snowy wall watching the village at night: falling snow, glowing windows, street lamps and a thin crescent moon.",
+      "description_bg": "Две котки на заснежена ограда гледат селото нощем: вали сняг, прозорците светят, уличните лампи горят и грее тънък лунен сърп."
+    },
+    {
       "id": "ginger-cat",
       "title": "Ginger Cat in the Meadow",
       "title_bg": "Рижа котка в ливадата",
@@ -289,6 +339,64 @@
       "technique_bg": "Акварел",
       "description": "A golden-haired mermaid with a crown, sitting on a rock among the waves and listening to a seashell.",
       "description_bg": "Златокоса русалка с корона седи на скала сред вълните и слуша морска мида."
+    },
+    {
+      "id": "swan-lake",
+      "title": "Swan Lake",
+      "title_bg": "Лебедово езеро",
+      "image": "images/gallery/swan-lake.jpg",
+      "thumb": "images/gallery/thumbs/swan-lake.jpg",
+      "category": "portrait",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "A ballerina with swan wings dancing on a lake among white swans and water lilies, with a misty castle behind her.",
+      "description_bg": "Балерина с лебедови крила танцува в езеро сред бели лебеди и водни лилии, а зад нея се издига мъглив замък."
+    },
+    {
+      "id": "moon-cherries",
+      "title": "Moon Cherries",
+      "title_bg": "Лунни череши",
+      "image": "images/gallery/moon-cherries.jpg",
+      "thumb": "images/gallery/thumbs/moon-cherries.jpg",
+      "category": "animals",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "Two cherries turned into a full moon and a crescent, hanging from a golden leaf in a starry night sky, with a little butterfly.",
+      "description_bg": "Две череши, превърнати в пълна луна и лунен сърп, висят от златно листо в звездно небе, а до тях каца малка пеперуда."
+    },
+    {
+      "id": "cocktail-by-the-sea",
+      "title": "Cocktail by the Sea",
+      "title_bg": "Коктейл край морето",
+      "image": "images/gallery/cocktail-by-the-sea.jpg",
+      "thumb": "images/gallery/thumbs/cocktail-by-the-sea.jpg",
+      "category": "flowers",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "A red cocktail with a striped straw and a little seashell on a wooden table, with a lace curtain and the sea behind.",
+      "description_bg": "Червен коктейл с раирана сламка и малка мида върху дървена маса, а зад тях дантелено перде и морето."
+    },
+    {
+      "id": "old-man-and-the-sea",
+      "title": "The Old Man and the Sea",
+      "title_bg": "Старецът и морето",
+      "image": "images/gallery/old-man-and-the-sea.jpg",
+      "thumb": "images/gallery/thumbs/old-man-and-the-sea.jpg",
+      "category": "portrait",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "An old fisherman with a pipe and a sailor's cap pulling his net out of the sea.",
+      "description_bg": "Стар рибар с лула и моряшка шапка вади мрежата си от морето."
+    },
+    {
+      "id": "fountain-in-the-park",
+      "title": "Fountain in the Park",
+      "title_bg": "Фонтан в парка",
+      "image": "images/gallery/fountain-in-the-park.jpg",
+      "thumb": "images/gallery/thumbs/fountain-in-the-park.jpg",
+      "category": "landscape",
+      "description": "A sparkling fountain in a star-shaped pool on a green lawn, with sunlight falling through the trees.",
+      "description_bg": "Искрящ фонтан в басейн с форма на звезда сред зелена поляна, огрян от слънце, което се процежда през дърветата."
     }
   ]
 }
