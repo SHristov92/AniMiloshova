@@ -383,7 +383,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .hero-art { position: relative; height: clamp(340px, 42vw, 520px); }
 .hero-art .frame {
   position: absolute; margin: 0;
-  border-radius: var(--radius); overflow: hidden;
+  border-radius: 0; overflow: hidden;
   box-shadow: var(--shadow-hover);
   border: 8px solid var(--surface);
   cursor: pointer;
@@ -422,7 +422,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .card {
   margin: 0 0 24px;
   background: var(--surface);
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: pointer;
@@ -458,10 +458,10 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
 .about-photo { position: relative; }
 .about-photo::before {
   content: ""; position: absolute; inset: 22px -22px -22px 22px;
-  border-radius: var(--radius);
+  border-radius: 0;
   background: linear-gradient(135deg, var(--sun), var(--coral));
 }
-.about-photo img { position: relative; border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: var(--shadow-hover); }
+.about-photo img { position: relative; border-radius: 0; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: var(--shadow-hover); }
 .about-text p { color: var(--text-soft); }
 
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 28px; }
@@ -539,7 +539,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 .footer-col h4 { font-family: var(--font-head); font-size: 1.25rem; color: #fff; margin: 0 0 16px; }
 .footer-col p { margin: 0; line-height: 1.7; }
 .footer-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 300px; }
-.footer-thumb { padding: 0; border: 0; border-radius: 10px; overflow: hidden; cursor: pointer; background: #3a3444; aspect-ratio: 1; }
+.footer-thumb { padding: 0; border: 0; border-radius: 0; overflow: hidden; cursor: pointer; background: #3a3444; aspect-ratio: 1; }
 .footer-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s, opacity .4s; opacity: .9; }
 .footer-thumb:hover img, .footer-thumb:focus-visible img { transform: scale(1.08); opacity: 1; }
 .footer-contacts { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
@@ -623,7 +623,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 .video-card { margin: 0; }
 .video-card video {
   display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover;
-  border-radius: var(--radius); background: #000;
+  border-radius: 0; background: #000;
   border-bottom: 5px solid var(--accent);
   box-shadow: 0 14px 34px rgba(0, 0, 0, .35);
 }
@@ -642,7 +642,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 .moment:first-child { margin-left: auto; }
 .moment:last-child { margin-right: auto; }
 .moment img {
-  width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius);
+  width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 0;
   box-shadow: var(--shadow); border: 6px solid var(--surface);
 }
 .moment:nth-child(odd) img { transform: rotate(-1.5deg); }
@@ -662,7 +662,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 .section-event { padding-top: 0; }
 .event-card {
   display: grid; grid-template-columns: auto 1fr; align-items: stretch;
-  background: var(--surface); border-radius: calc(var(--radius) + 6px); overflow: hidden;
+  background: var(--surface); border-radius: 0; overflow: hidden;
   box-shadow: var(--shadow-hover);
 }
 /* The whole photo is shown at its own shape (no cropping); the text column takes the rest. */
@@ -680,7 +680,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 /* Commissions */
 .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
 .service {
-  display: flex; flex-direction: column; background: var(--surface); border-radius: var(--radius);
+  display: flex; flex-direction: column; background: var(--surface); border-radius: 0;
   overflow: hidden; box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s;
 }
 .service:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
