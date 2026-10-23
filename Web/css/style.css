@@ -15,7 +15,7 @@
   --line:   #ece8f1;
   --bg:     #fffdf9;
   --tint:   #fff4ec;
-  --white:  #ffffff;   /* text on coloured buttons and badges */
+  --white:  #ffffff;   /* text on coloured buttons and badges (the footer is always dark and uses plain white) */
   --surface: #ffffff;  /* cards, chips and photo frames */
   --text-soft: #4a4654;
   --header-bg: rgba(255, 253, 249, .85);
@@ -90,6 +90,129 @@
   --text-soft: #3e5246;
   --header-bg: rgba(247, 251, 246, .85);
   --event-bg: linear-gradient(135deg, #e8f3ea, #f4efe2 60%, #e6f2ef);
+}
+/* The two themes below are taken from the 2026 logo (Resources/Ani Miloshova Logo 2026.png). */
+[data-theme="terracotta"] {
+  --coral:  #9a5530;
+  --sun:    #c08a3e;
+  --teal:   #c17d5d;
+  --violet: #603226;
+  --sky:    #d9a27b;
+  --ink:    #280d12;
+  --muted:  #7a5a52;
+  --line:   #ecdccf;
+  --bg:     #fbf4ec;
+  --tint:   #f4e4d6;
+  --text-soft: #4f3330;
+  --header-bg: rgba(251, 244, 236, .85);
+  --event-bg: linear-gradient(135deg, #f4e4d6, #f1dccd 60%, #f6e8d3);
+}
+[data-theme="plum"] {
+  --coral:  #c98a45;
+  --sun:    #e0a95c;
+  --teal:   #c17d5d;
+  --violet: #d0977a;
+  --sky:    #bc733e;
+  --ink:    #f3e6da;
+  --muted:  #b59a8e;
+  --line:   #432028;
+  --bg:     #280d12;
+  --tint:   #31141a;
+  --white:  #280d12;   /* plum text on the gold buttons reads better than white */
+  --surface: #3a1a20;
+  --text-soft: #dcc6b8;
+  --header-bg: rgba(40, 13, 18, .85);
+  --event-bg: linear-gradient(135deg, #3a1a20, #40201d 60%, #33161b);
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, .5);
+}
+[data-theme="peach"] {
+  --coral:  #e84a5f;
+  --sun:    #fecea8;
+  --teal:   #ff847c;
+  --violet: #45171d;
+  --sky:    #ffa98f;
+  --ink:    #45171d;
+  --muted:  #8a5a5c;
+  --line:   #f6ddd0;
+  --bg:     #fff8f3;
+  --tint:   #ffeadb;
+  --text-soft: #5e3036;
+  --header-bg: rgba(255, 248, 243, .85);
+  --event-bg: linear-gradient(135deg, #ffeadb, #ffe0dc 60%, #fff1e2);
+}
+[data-theme="peach-dark"] {
+  --coral:  #e84a5f;
+  --sun:    #fecea8;
+  --teal:   #ff847c;
+  --violet: #ff847c;
+  --sky:    #ffa98f;
+  --ink:    #fff1e6;
+  --muted:  #c9a09c;
+  --line:   #4e1f26;
+  --bg:     #2a0e12;
+  --tint:   #33121a;
+  --surface: #45171d;
+  --text-soft: #f0d2c4;
+  --header-bg: rgba(42, 14, 18, .85);
+  --event-bg: linear-gradient(135deg, #45171d, #4a1a22 60%, #3a1418);
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, .5);
+}
+[data-theme="pastel"] {
+  --coral:  #ff7c7c;
+  --sun:    #ffd082;
+  --teal:   #88e1f2;
+  --violet: #34000d;
+  --sky:    #6fcfe6;
+  --ink:    #34000d;
+  --muted:  #6e4a50;
+  --line:   #d6c6aa;
+  --bg:     #ecdfc8;
+  --tint:   #e3d2b6;
+  --white:  #34000d;   /* dark text on the light coral buttons; white would be too faint */
+  --text-soft: #34000d;
+  --header-bg: rgba(236, 223, 200, .85);
+  --event-bg: linear-gradient(135deg, #e3d2b6, #eed0c8 60%, #d3e6e3);
+}
+/* The hero intro uses the dark text colour too, not the softer muted one. */
+[data-theme="pastel"] .hero-intro { color: #34000d; }
+/* A redder "In the studio" band, to sit with the burgundy text. */
+[data-theme="pastel"] .section-dark { background: #3d1620; }
+[data-theme="pastel"] .section-dark .section-head p { color: #e2c6c8; }
+[data-theme="pastel-dark"] {
+  --coral:  #ff7c7c;
+  --sun:    #ffd082;
+  --teal:   #88e1f2;
+  --violet: #88e1f2;
+  --sky:    #6fcfe6;
+  --ink:    #f5f1ea;
+  --muted:  #a5a8c0;
+  --line:   #33375a;
+  --bg:     #1a1c30;
+  --tint:   #1f2238;
+  --white:  #21243d;   /* navy text on the light coral buttons; white would be too faint */
+  --surface: #2a2e4a;
+  --text-soft: #d3d5e6;
+  --header-bg: rgba(26, 28, 48, .85);
+  --event-bg: linear-gradient(135deg, #2a2e4a, #322c48 60%, #233249);
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, .5);
+}
+[data-theme="olive"] {
+  --coral:  #616f39;
+  --sun:    #ffd98e;
+  --teal:   #ffb677;
+  --violet: #c75a3f;   /* #ff8364 deepened so it reads as text on the light background */
+  --sky:    #ff8364;
+  --ink:    #2c3318;
+  --muted:  #6e7056;
+  --line:   #ece4d2;
+  --bg:     #fffbf2;
+  --tint:   #fff2da;
+  --text-soft: #464b2e;
+  --header-bg: rgba(255, 251, 242, .85);
+  --event-bg: linear-gradient(135deg, #fff2da, #ffe8d6 60%, #f1f3e2);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -408,7 +531,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
   background: linear-gradient(90deg, var(--coral), var(--sun), var(--teal), var(--sky), var(--violet));
 }
 .footer-cols { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: clamp(28px, 5vw, 64px); padding: clamp(44px, 6vw, 64px) 0 36px; }
-.footer-col h4 { font-family: var(--font-head); font-size: 1.25rem; color: var(--white); margin: 0 0 16px; }
+.footer-col h4 { font-family: var(--font-head); font-size: 1.25rem; color: #fff; margin: 0 0 16px; }
 .footer-col p { margin: 0; line-height: 1.7; }
 .footer-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 300px; }
 .footer-thumb { padding: 0; border: 0; border-radius: 10px; overflow: hidden; cursor: pointer; background: #3a3444; aspect-ratio: 1; }
@@ -416,11 +539,11 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 .footer-thumb:hover img, .footer-thumb:focus-visible img { transform: scale(1.08); opacity: 1; }
 .footer-contacts { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
 .footer-contacts .label { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--sun); }
-.footer-contacts a { color: var(--white); text-decoration: none; font-weight: 600; word-break: break-word; }
+.footer-contacts a { color: #fff; text-decoration: none; font-weight: 600; word-break: break-word; }
 .footer-contacts a:hover { color: var(--sun); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .footer-nav a { color: #c9c4d4; text-decoration: none; font-size: .85rem; }
-.footer-nav a:hover { color: var(--white); }
+.footer-nav a:hover { color: #fff; }
 .footer-bottom { border-top: 1px solid #3a3444; padding: 20px 0 24px; text-align: center; font-size: .8rem; color: #9a94a6; }
 .footer-bottom p { margin: 0; }
 
@@ -767,6 +890,8 @@ html:has(.lightbox[open]) { overflow: hidden; }
 
 /* Newsletter band above the footer */
 .newsletter { color: #fff; background: linear-gradient(120deg, var(--coral), var(--violet)); padding: clamp(40px, 6vw, 64px) 0; }
+[data-theme="peach-dark"] .newsletter { background: linear-gradient(120deg, #e84a5f, #45171d); }
+[data-theme="pastel-dark"] .newsletter { background: linear-gradient(120deg, #ff7c7c, #21243d); }
 .newsletter-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
 .newsletter h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 8px; }
 .newsletter p { margin: 0; opacity: .92; }

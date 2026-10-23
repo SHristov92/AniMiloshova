@@ -1,7 +1,6 @@
 {
   "name": "Ani Miloshova",
   "role": "Bulgarian artist",
-  "tagline": "Cozy art by Ani",
   "intro": "Cozy, nostalgic paintings in oil, acrylic and watercolour: cottages with flowers everywhere, misty forests, old streets, still lifes and a little bit of magic. Welcome to my gallery.",
   "heroPhoto": "images/photos/ani-hero.jpg",
 
@@ -14,7 +13,7 @@
       "I graduated from the English Language High School and studied Tourism at Sofia University. My favourite materials are acrylic, oil paints and watercolour.",
       "Besides painting, I also make handmade jewellery. I love old legends, like the Krampus, the Yule Cat and the karakonjuls of the Balkan winter nights, and I bring them to life in my art.",
       "My newest paintings are about nostalgia and slow living: cozy cottages, misty forests, quiet old streets. They are a small escape from the rush of modern life, and every one of them is made by hand.",
-      "I share them on Instagram as @cozy.art.by.ani. Every painting starts with a story, and I hope you find a little bit of it in each one."
+      "I share them on Instagram as @ani.miloshova.paintings. Every painting starts with a story, and I hope you find a little bit of it in each one."
     ]
   },
 
@@ -100,8 +99,7 @@
       { "year": "Teens", "title": "First exhibitions", "text": "At 17–18 my paintings grew more professional and I started showing them in galleries." },
       { "year": "2018", "title": "“The Castle of Shadows”", "text": "A photo project I named and modelled for with Plamendura Art, shot in the old mineral bathhouse in Bankya.", "url": "https://plamenduraart.wordpress.com/2018/01/07/the-castle-of-shadows-ani-miloshova-for-plamendura-art/" },
       { "year": "2019", "title": "Interview for CreativityCocktail", "text": "A special interview about my life and my painting. By then I had about six solo exhibitions and many group ones." },
-      { "year": "2026", "title": "International exhibition in Athens", "text": "An evening with artists from several countries around the world, organised by ArtNumber23 at the Michael Cacoyannis Foundation on 28 June." },
-      { "year": "Today", "title": "Cozy art by Ani", "text": "My newest paintings, shared on Instagram.", "url": "https://www.instagram.com/cozy.art.by.ani/" }
+      { "year": "2026", "title": "International exhibition in Athens", "text": "An evening with artists from several countries around the world, organised by ArtNumber23 at the Michael Cacoyannis Foundation on 28 June." }
     ]
   },
 
@@ -118,7 +116,7 @@
     "email": "hello@example.com",
     "phone": "",
     "location": "Bulgaria",
-    "instagram": "cozy.art.by.ani",
+    "instagram": "ani.miloshova.paintings",
     "formEndpoint": ""
   },
 

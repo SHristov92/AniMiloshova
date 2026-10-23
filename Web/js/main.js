@@ -992,7 +992,14 @@
     { id: "dark",    label: "Dark",    bg: "Тъмна",   a: "#ff5d73", b: "#16141b", meta: "#16141b" },
     { id: "ocean",   label: "Ocean",   bg: "Океан",   a: "#0077b6", b: "#48cae4", meta: "#0077b6" },
     { id: "sunset",  label: "Sunset",  bg: "Залез",   a: "#e63946", b: "#f4a261", meta: "#e63946" },
-    { id: "forest",  label: "Forest",  bg: "Гора",    a: "#2d6a4f", b: "#d4a373", meta: "#2d6a4f" }
+    { id: "forest",  label: "Forest",  bg: "Гора",    a: "#2d6a4f", b: "#d4a373", meta: "#2d6a4f" },
+    { id: "terracotta", label: "Terracotta", bg: "Теракота", a: "#c17d5d", b: "#fbf4ec", meta: "#9a5530" },
+    { id: "plum",    label: "Plum",    bg: "Слива",   a: "#c98a45", b: "#280d12", meta: "#280d12" },
+    { id: "peach",   label: "Peach",   bg: "Праскова", a: "#e84a5f", b: "#fecea8", meta: "#e84a5f" },
+    { id: "peach-dark", label: "Peach dark", bg: "Праскова тъмна", a: "#e84a5f", b: "#2a0e12", meta: "#2a0e12" },
+    { id: "pastel",  label: "Pastel",  bg: "Пастел",  a: "#ff7c7c", b: "#88e1f2", meta: "#21243d" },
+    { id: "pastel-dark", label: "Pastel dark", bg: "Пастел тъмна", a: "#ff7c7c", b: "#1a1c30", meta: "#1a1c30" },
+    { id: "olive",   label: "Olive",   bg: "Маслина", a: "#616f39", b: "#ffb677", meta: "#616f39" }
   ];
 
   var themeToggle = $(".theme-toggle");
