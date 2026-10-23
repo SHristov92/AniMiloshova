@@ -156,6 +156,11 @@
     var description = (site.footer && site.footer.about) || site.intro;
     if (description) document.querySelector('meta[name="description"]').setAttribute("content", description);
 
+    // A short row of facts under the intro (site.json "heroFacts"). Leave it out to hide the row.
+    var heroFacts = $("#hero-facts");
+    (site.heroFacts || []).forEach(function (fact) { heroFacts.appendChild(el("li", { text: fact })); });
+    heroFacts.hidden = !(site.heroFacts || []).length;
+
     var about = site.about || {};
     if (about.title) $("#about-title").textContent = about.title;
     if (about.quote) { $("#about-quote").textContent = about.quote; $("#about-quote").hidden = false; }
@@ -223,6 +228,12 @@
 
     var contact = site.contact || {};
     state.contact = contact;
+    if (contact.instagram) {
+      var heroInsta = $("#hero-insta");
+      heroInsta.href = instagramUrl(contact.instagram);
+      heroInsta.querySelector("span").textContent = "@" + contact.instagram;
+      heroInsta.hidden = false;
+    }
     if (contact.text) $("#contact-text").textContent = contact.text;
     var cards = $("#contact-cards");
     var items = [
