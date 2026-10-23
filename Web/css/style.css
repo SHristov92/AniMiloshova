@@ -731,10 +731,10 @@ html:has(.lightbox[open]) { overflow: hidden; }
   color: #f3efe8;
   background:
     radial-gradient(ellipse 70% 55% at 45% 38%, rgba(255, 238, 214, .13), transparent 70%),
-    linear-gradient(#1d1a21, #141217);
+    linear-gradient(#6e5d59, #5a4b47);   /* warm mauve taupe */
   overflow: hidden;
 }
-.lightbox::backdrop { background: #141217; }
+.lightbox::backdrop { background: #5a4b47; }
 .lightbox[open] { animation: lb-in .35s ease both; }
 @keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
 
@@ -744,7 +744,7 @@ html:has(.lightbox[open]) { overflow: hidden; }
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 18px;
 }
-.lb-counter { font-size: .8rem; letter-spacing: .18em; color: #a59fae; }
+.lb-counter { font-size: .8rem; letter-spacing: .18em; color: #dccfc9; }
 .lb-tools { display: flex; gap: 10px; }
 
 .lb-btn, .lb-nav {
