@@ -52,14 +52,14 @@
       "price": "280 €"
     },
     {
-      "id": "pegasus",
-      "title": "Pegasus",
-      "title_bg": "Пегас",
-      "image": "images/gallery/pegasus.jpg",
-      "thumb": "images/gallery/thumbs/pegasus.jpg",
+      "id": "flying-unicorn",
+      "title": "Flying Unicorn",
+      "title_bg": "Летящ еднорог",
+      "image": "images/gallery/flying-unicorn.jpg",
+      "thumb": "images/gallery/thumbs/flying-unicorn.jpg",
       "category": "animals",
-      "description": "A white winged horse leaping through pink and blue clouds above a field of flowers.",
-      "description_bg": "Бял крилат кон лети през розови и сини облаци над поле с цветя.",
+      "description": "A white winged unicorn leaping through pink and blue clouds above a field of flowers.",
+      "description_bg": "Бял крилат еднорог лети през розови и сини облаци над поле с цветя.",
       "status": "sold",
       "featured": true
     },

@@ -59,8 +59,8 @@
     "title": "Behind the easel",
     "title_bg": "Зад статива",
     "items": [
-      { "src": "images/photos/ani-easel-1.jpg", "alt": "Ani in a long cream dress next to an easel with the Pegasus painting", "alt_bg": "Ани в дълга кремава рокля до статив с картината с Пегас" },
-      { "src": "images/photos/ani-easel-3.jpg", "alt": "Ani holding the framed Pegasus painting among wildflowers", "alt_bg": "Ани държи картината с Пегас в рамка сред полски цветя" },
+      { "src": "images/photos/ani-easel-1.jpg", "alt": "Ani in a long cream dress next to an easel with the Flying Unicorn painting", "alt_bg": "Ани в дълга кремава рокля до статив с картината „Летящ еднорог“" },
+      { "src": "images/photos/ani-easel-3.jpg", "alt": "Ani holding the framed Flying Unicorn painting among wildflowers", "alt_bg": "Ани държи картината „Летящ еднорог“ в рамка сред полски цветя" },
       { "src": "images/photos/ani-painting-goose.jpg", "alt": "Painting the White Goose", "alt_bg": "Рисуване на „Бяла гъска“" },
       { "src": "images/photos/ani-easel-2.jpg", "alt": "Ani next to the Old Town House painting on an easel", "alt_bg": "Ани до картината „Старинна къща“ на статив" },
       { "src": "images/photos/ani-easel-4.jpg", "alt": "Ani holding the framed Herbarium", "alt_bg": "Ани държи „Хербарий“ в рамка" },
