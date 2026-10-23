@@ -177,9 +177,6 @@
 }
 /* The hero intro uses the dark text colour too, not the softer muted one. */
 [data-theme="pastel"] .hero-intro { color: #34000d; }
-/* A redder "In the studio" band, to sit with the burgundy text. */
-[data-theme="pastel"] .section-dark { background: #3d1620; }
-[data-theme="pastel"] .section-dark .section-head p { color: #e2c6c8; }
 [data-theme="pastel-dark"] {
   --coral:  #ff7c7c;
   --sun:    #ffd082;
@@ -619,8 +616,9 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 }
 
 /* Studio videos */
-.section-dark { background: #24202c; color: #fff; }
-.section-dark .section-head p { color: #c9c4d4; }
+/* Same warm mauve taupe as the painting viewer. */
+.section-dark { background: linear-gradient(#6e5d59, #5a4b47); color: #fff; }
+.section-dark .section-head p { color: #dccfc9; }
 .videos {
   display: grid; gap: 18px;
   grid-template-columns: repeat(4, 1fr);
