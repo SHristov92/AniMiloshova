@@ -371,12 +371,10 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
   color: var(--violet);
 }
 .hero h1 { font-size: clamp(2.8rem, 7vw, 5.2rem); margin-bottom: .2em; }
-/* The hand-lettered logo stands in for the name. It is drawn as a mask, so its colour is just the background below. */
+/* The hand-lettered logo stands in for the name. Its colours (burgundy name, ochre emblem) are set in the SVG. */
 .hero-logo {
   width: min(100%, 460px); aspect-ratio: 636 / 199; margin: 0 0 .4em;
-  background: #b97830;   /* the ochre gold from the logo */
-  -webkit-mask: url("../images/logo/wordmark.svg") left center / contain no-repeat;
-          mask: url("../images/logo/wordmark.svg") left center / contain no-repeat;
+  background: url("../images/logo/wordmark.svg") left center / contain no-repeat;
 }
 .hero-tagline { font-family: var(--font-head); font-style: italic; font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: var(--coral); margin: 0 0 16px; }
 .hero-intro { color: var(--muted); max-width: 480px; margin: 0 0 28px; }
@@ -560,7 +558,7 @@ a.contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hov
 @media (max-width: 900px) {
   .hero-inner, .about { grid-template-columns: 1fr; }
   .hero-text { text-align: center; }
-  .hero-logo { margin-inline: auto; -webkit-mask-position: center; mask-position: center; }
+  .hero-logo { margin-inline: auto; background-position: center; }
   .hero-intro { margin-inline: auto; }
   .hero-actions { justify-content: center; }
   .about-photo { max-width: 380px; margin: 0 auto 20px; }
