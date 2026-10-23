@@ -9,6 +9,26 @@
 
   "artworks": [
     {
+      "id": "black-horse",
+      "title": "Black Horse in the Desert",
+      "title_bg": "Черен кон в пустинята",
+      "image": "images/gallery/black-horse.jpg",
+      "thumb": "images/gallery/thumbs/black-horse.jpg",
+      "category": "animals",
+      "description": "A black horse galloping down a sand dune, its mane flying and sand rising around it under a pale pink sky.",
+      "description_bg": "Черен кон препуска надолу по пясъчна дюна, гривата му се вее, а пясъкът се вдига около него под бледорозово небе."
+    },
+    {
+      "id": "woman-in-the-desert",
+      "title": "Woman in the Desert",
+      "title_bg": "Жена в пустинята",
+      "image": "images/gallery/woman-in-the-desert.jpg",
+      "thumb": "images/gallery/thumbs/woman-in-the-desert.jpg",
+      "category": "portrait",
+      "description": "A woman in a dark gown with a jewelled bodice, her long hair blowing in the wind, looking out over the dunes at sunset.",
+      "description_bg": "Жена в тъмна рокля с бродиран корсаж, с дълга коса, развята от вятъра, гледа към дюните по залез."
+    },
+    {
       "id": "ginger-cat",
       "title": "Ginger Cat in the Meadow",
       "title_bg": "Рижа котка в ливадата",
@@ -18,18 +38,6 @@
       "description": "A ginger cat sitting among yellow wildflowers, looking at the hills under a soft pink evening sky.",
       "description_bg": "Рижа котка, седнала сред жълти полски цветя, гледа хълмовете под нежно розово вечерно небе.",
       "featured": true
-    },
-    {
-      "id": "lady-with-umbrella",
-      "title": "Lady with the Lace Umbrella",
-      "title_bg": "Дама с дантелен чадър",
-      "image": "images/gallery/lady-with-umbrella.jpg",
-      "thumb": "images/gallery/thumbs/lady-with-umbrella.jpg",
-      "category": "portrait",
-      "technique": "Watercolour",
-      "technique_bg": "Акварел",
-      "description": "A lady in a dark gown with a lace umbrella, butterflies around her and a little black cat at her feet, among bare trees and mist.",
-      "description_bg": "Дама в тъмна рокля с дантелен чадър, пеперуди около нея и малка черна котка в краката ѝ, сред голи дървета и мъгла."
     },
     {
       "id": "cottage-with-wildflowers",
@@ -68,7 +76,7 @@
       "mood_bg": "Дъждовна и изящна",
       "description": "Piazza San Marco on a rainy evening: warm lights reflected on the wet stones and little red umbrellas.",
       "description_bg": "Площад „Сан Марко“ в дъждовна вечер: топли светлини, отразени в мокрите камъни, и малки червени чадъри.",
-      "status": "sold"
+      "status": "available"
     },
     {
       "id": "herbarium",
@@ -128,20 +136,6 @@
       "description_bg": "Медна кана, стара бутилка и стъклена гарафа с две ябълки пред ярка драперия в цветовете на дъгата."
     },
     {
-      "id": "black-swans",
-      "title": "Black Swans",
-      "title_bg": "Черни лебеди",
-      "image": "images/gallery/black-swans.jpg",
-      "thumb": "images/gallery/thumbs/black-swans.jpg",
-      "category": "animals",
-      "technique": "Watercolour",
-      "technique_bg": "Акварел",
-      "mood": "Dark and Elegant",
-      "mood_bg": "Тъмна и елегантна",
-      "description": "Three black swans gliding over a misty lilac lake.",
-      "description_bg": "Три черни лебеда се плъзгат по мъгливо лилаво езеро."
-    },
-    {
       "id": "old-town-house",
       "title": "Old Town House",
       "title_bg": "Старинна къща",
@@ -188,7 +182,7 @@
       "mood_bg": "Уютна и носталгична",
       "description": "A yellow village house with blue shutters, surrounded by autumn trees.",
       "description_bg": "Жълта селска къща със сини капаци, заобиколена от есенни дървета.",
-      "status": "available",
+      "status": "sold",
       "price": "150 €"
     },
     {
@@ -229,18 +223,6 @@
       "status": "available"
     },
     {
-      "id": "rainy-day-in-the-city",
-      "title": "Rainy Day in the City",
-      "title_bg": "Дъждовен ден в града",
-      "image": "images/gallery/rainy-day-in-the-city.jpg",
-      "thumb": "images/gallery/thumbs/rainy-day-in-the-city.jpg",
-      "category": "places",
-      "technique": "Watercolour",
-      "technique_bg": "Акварел",
-      "description": "A vintage street scene: people in long coats, a little girl in red, an old car and wet pavements.",
-      "description_bg": "Винтидж улична сцена: хора в дълги палта, малко момиченце в червено, стара кола и мокри тротоари."
-    },
-    {
       "id": "yellow-palace",
       "title": "The Yellow Palace",
       "title_bg": "Жълтият дворец",
@@ -259,6 +241,54 @@
       "category": "flowers",
       "description": "A wicker bottle, a glass jar with rosehip branches, a pomegranate and a lemon on deep blue drapery.",
       "description_bg": "Плетена бутилка, стъклен буркан с клонки шипка, нар и лимон върху тъмносиня драперия."
+    },
+    {
+      "id": "vintage-new-york",
+      "title": "Vintage New York at Christmas",
+      "title_bg": "Старият Ню Йорк по Коледа",
+      "image": "images/gallery/vintage-new-york.jpg",
+      "thumb": "images/gallery/thumbs/vintage-new-york.jpg",
+      "category": "places",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "A snowy city street in the 1950s: shoppers in red hats, a vintage car, a bank and a little café, with “Merry Christmas” in the shop window.",
+      "description_bg": "Заснежена градска улица през 50-те: минувачи с червени шапки, стара кола, банка и малко кафене, а на витрината пише „Merry Christmas“."
+    },
+    {
+      "id": "old-lady-and-the-sea",
+      "title": "The Old Lady and the Sea",
+      "title_bg": "Старицата и морето",
+      "image": "images/gallery/old-lady-and-the-sea.jpg",
+      "thumb": "images/gallery/thumbs/old-lady-and-the-sea.jpg",
+      "category": "portrait",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "An old lady with a cup of tea on a wooden terrace by the sea, a calico cat beside her and a seashell wind chime above.",
+      "description_bg": "Възрастна дама с чаша чай на дървена тераса край морето, до нея трицветна котка, а над нея звънче от миди."
+    },
+    {
+      "id": "mermaid-on-the-rocks",
+      "title": "Mermaid on the Rocks",
+      "title_bg": "Русалка на скалите",
+      "image": "images/gallery/mermaid-on-the-rocks.jpg",
+      "thumb": "images/gallery/thumbs/mermaid-on-the-rocks.jpg",
+      "category": "animals",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "A dark-haired mermaid resting on the rocks by a turquoise sea, her rainbow tail curling behind her.",
+      "description_bg": "Тъмнокоса русалка почива на скалите край тюркоазено море, а дъгоцветната ѝ опашка се извива зад нея."
+    },
+    {
+      "id": "mermaid-with-a-shell",
+      "title": "Mermaid with a Shell",
+      "title_bg": "Русалка с мида",
+      "image": "images/gallery/mermaid-with-a-shell.jpg",
+      "thumb": "images/gallery/thumbs/mermaid-with-a-shell.jpg",
+      "category": "animals",
+      "technique": "Watercolour",
+      "technique_bg": "Акварел",
+      "description": "A golden-haired mermaid with a crown, sitting on a rock among the waves and listening to a seashell.",
+      "description_bg": "Златокоса русалка с корона седи на скала сред вълните и слуша морска мида."
     }
   ]
 }
